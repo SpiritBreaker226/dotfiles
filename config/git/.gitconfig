@@ -1,0 +1,65 @@
+[user]
+	name = Jason Stathopulos
+	email = jstathopulos@gmail.com
+
+[github]
+	user = SpiritBreaker226
+
+[core]
+	editor = "/Applications/TextMate.app/Contents/Resources/mate -w"
+	excludesfile = ~/.config/git/.gitignore_global
+
+[merge]
+	tool = opendiff
+
+[diff]
+	tool = opendiff
+
+[color]
+	interactive = auto
+	ui = auto
+	[color "branch"]
+	  current = yellow reverse
+	  local = yellow
+	  remote = green
+	[color "diff"]
+	  meta = yellow bold
+	  frag = magenta bold
+	  old = red bold
+	  new = green bold
+	[color "status"]
+	  added = yellow
+	  changed = green
+	  untracked = cyan
+
+[credential]
+	helper = osxkeychain
+
+[push]
+	default = simple
+
+[pull]
+	rebase = preserve
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[url "ssh://git@heroku.com/"]
+	insteadOf = https://git.heroku.com/
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	force-push = "!push -f origin $a"
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

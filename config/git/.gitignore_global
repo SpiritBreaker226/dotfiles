@@ -1,0 +1,11 @@
+*.LCK
+*.DS_Store
+*.zip
+*.Trashes
+*.Spotlight
+.vscode/
+_notes/
+*.TODO
+logs/
+.ruby-version
+console.sql

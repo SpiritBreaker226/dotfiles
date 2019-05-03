@@ -1,0 +1,104 @@
+# Imporvates the Basic Terminal Command
+
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ls="ls -FalrtTqh"                      # Preferred 'ls' implementation
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+cd() { builtin cd "$@" && ls }              # Always list directory contents upon 'cd'
+alias .='pwd'                               # Display current directory path
+alias ~="cd ~"                              # Go Home
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+alias c='clear'                             # c:            Clear terminal display
+alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+alias show_options='shopt'                  # Show_options: display bash options settings
+alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
+alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+
+alias notes='$EDITOR ~/daily-notes/`date "+%Y-%m-%d"`.md'
+
+alias reload="source ~/.zshrc"
+
+# Ruby on Rails
+
+alias rspec='nocorrect rspec -f d' # Preferrred 'rspec' implentation, can only be used if rspec gem is installed in the application
+rails_new () { rails new "$@" --database=postgresql -T -m ~/Documents/Dev/Ruby/template.rb } # creates a new project with a database postgreSQL and using a pre define template
+
+rtest() { bundle exec rspec $1 }
+alias tc="open coverage/index.html"
+
+# Node Alias
+
+alias n='node'
+alias nm='nodemon'
+alias ni='node inspect'
+
+alias ndm='yarn db-migrate'
+alias ndmt='NODE_ENV=test rdm'
+alias ndms='yarn db-check-migrations'
+alias db:reset:develop='yarn db-recreate && db-migrate && db-seed'
+alias db:reset:test='NODE_ENV=test yarn db-recreate && db-migrate'
+alias db:reset='db:reset:develop && db:reset:test'
+
+alias ynrt="yarn run test"
+alias ynrtw="yarn run test:watch"
+alias ynrtc="yarn run test:cover"
+
+alias testr="ynrtc && tc"
+
+# git
+
+alias dotfiles_gconfig='git --git-dir=/Users/jstathopulos/dev/dotfiles --work-tree=/Users/jstathopulos'
+
+alias gbgm="
+  git branch --merged |
+  grep -v \"\\*\" |
+  grep -v master |
+  grep -v dev |
+  grep -v develop |
+  xargs -n 1 git branch -d
+"
+
+alias grbd="git rebase develop"
+alias grbm="git rebase master"
+alias gcod="gaco develop"
+alias gcom="gaco master"
+alias gs="git status"
+alias gforce="git push -f origin"
+alias gundo="git reset HEAD~"
+alias gredo="git add ... && git commit -c ORIG_HEAD"
+
+gcbb() { git checkout -b bug/$1 }
+gcbf() { git checkout -b feature/$1 }
+gcbh() { git checkout -b hotfix/$1 }
+gcbm() { git checkout -b maintenance/$1 }
+gcbr() { git checkout -b refactor/$1 }
+gcbrev() { git checkout -b revert/$1 }
+
+# Yarn
+
+alias ynrb="yarn run preversion"
+alias ynrl="yarn run lint"
+alias ynrsb="yarn run storybook"
+
+# Network
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# Miscellaneous
+
+alias hosts="sudo $EDITOR /etc/hosts"
+alias quit="exit"
+alias week="date +%V"
+alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+alias grip="grip -b"

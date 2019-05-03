@@ -1,0 +1,42 @@
+
+mvmk() {
+  dir="$2"
+  tmp="$2"; tmp="${tmp: -1}"
+  [ "$tmp" != "/" ] && dir="$(dirname "$2")"
+  [ -a "$dir" ] ||
+  mkdir -p "$dir" &&
+  mv "$@"
+}
+
+# Reset Work's Rails
+
+rrescue() {
+  declare -a services=("unicorn" "resque" "scheduler" "webpack")
+
+  for i in "${services[@]}"
+  do
+    echo "Killing $i";
+    ps aux | grep '$i' | awk '{print $2}' | xargs kill -9
+  done
+}
+
+# Node
+
+ngm() {
+  current_date="$(date +%Y%m%d%H%M%S)"
+  target_file="$(echo database/migrations/00000000000000_${1}.js | sed "s/00000000000000/${current_date}/")"
+  cp database/migrations/00000000000000_first_migration.js $target_file
+}
+
+# git
+
+gaco() {
+  echo "Checkout $1";
+  git checkout $1;
+  echo "Rebase pull $1";
+  git pull origin $1;
+  echo "Remove local branches merge to $1";
+  gbgm;
+  echo "Remove remote branches";
+  git remote prune origin;
+}
