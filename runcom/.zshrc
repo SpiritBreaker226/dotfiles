@@ -11,7 +11,7 @@ export DEFAULT_USER="jstathopulos"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Install awesome-font fonts
-source /usr/local/opt/powerlevel9k@0.6.3/powerlevel9k.zsh-theme
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source ~/.fonts/*.sh
 export ZSH_THEME="powerlevel9k/powerlevel9k"
 
