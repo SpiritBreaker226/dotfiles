@@ -3,7 +3,6 @@ tap "codeclimate/formulae"
 tap "homebrew/bundle"
 tap "homebrew/core"
 
-brew "codeclimate"
 brew "circleci"
 brew "fontconfig"
 brew "freetds"
