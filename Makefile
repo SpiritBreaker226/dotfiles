@@ -12,7 +12,7 @@ all: $(OS)
 
 macos: sudo core-macos packages link
 
-core-macos: brew zsh zsh-completions git npm ruby node
+core-macos: brew git npm ruby
 
 stow-macos: brew
 	is-executable stow || brew install stow
