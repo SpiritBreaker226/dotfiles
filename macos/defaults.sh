@@ -47,6 +47,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+# Switch to dark mode
+sudo defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
+
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
