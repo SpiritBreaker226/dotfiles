@@ -22,6 +22,15 @@ On a sparkling fresh installation of macOS:
     xcode-select --install
 
 The Xcode Command Line Tools includes `git` and `make` (not available on stock macOS).
+
+### Install Pre-Requirements
+
+  [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 Then, install this repo with `curl` available:
 
     bash -c "`curl -fsSL https://raw.githubusercontent.com/SpiritBreaker226/dotfiles/master/install.sh`"
@@ -37,6 +46,7 @@ Use the [Makefile](./Makefile) to install everything [listed above](#package-ove
 
 ## Post-install
 
+- Follow installation for [Powerline](https://powerline.readthedocs.io/en/latest/installation/osx.html)
 - `dotfiles dock` (set [Dock items](./macos/dock.sh))
 - `dotfiles macos` (set [macOS defaults](./macos/defaults.sh))
 - Mackup
