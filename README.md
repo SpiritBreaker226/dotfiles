@@ -2,8 +2,6 @@
 
 These are my dotfiles. Take anything you want, but at your own risk.
 
-It targets macOS systems, but it should work on \*nix as well (with `apt-get`).
-
 ## Package overview
 
 - [Homebrew](https://brew.sh) (packages: [Brewfile](./install/Brewfile))
@@ -79,7 +77,6 @@ Alternatively, you can have an additional, personal dotfiles repo at `~/.extra`.
 - [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Homebrew](https://brew.sh)
 - [Homebrew Cask](http://caskroom.io)
-- [Bash prompt](https://wiki.archlinux.org/index.php/Color_Bash_Prompt)
 - [Solarized Color Theme for GNU ls](https://github.com/seebi/dircolors-solarized)
 
 ## Credits

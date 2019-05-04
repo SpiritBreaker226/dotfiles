@@ -1,6 +1,6 @@
 SHELL = /bin/zsh
 DOTFILES_DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
-OS := $(shell bin/is-supported bin/is-macos macos linux)
+OS := macos
 PATH := $(DOTFILES_DIR)/bin:$(PATH)
 NVM_DIR := $(HOME)/.nvm
 export XDG_CONFIG_HOME := $(HOME)/.config
@@ -12,20 +12,10 @@ all: $(OS)
 
 macos: sudo core-macos packages link
 
-linux: core-linux link
-
 core-macos: brew zsh zsh-completions git npm ruby node
-
-core-linux:
-	apt-get update
-	apt-get upgrade -y
-	apt-get dist-upgrade -f
 
 stow-macos: brew
 	is-executable stow || brew install stow
-
-stow-linux: core-linux
-	is-executable stow || apt-get -y install stow
 
 sudo:
 	sudo -v
