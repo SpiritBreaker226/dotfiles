@@ -37,10 +37,10 @@ unlink: stow-$(OS)
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-# zsh: ZSH=/usr/local/bin/zsh
-# zsh: SHELLS=/private/etc/shells
-# zsh: brew
-# 	if ! grep -q $(ZSH) $(SHELLS); then brew install zsh zsh-completion pcre && sudo append $(ZSH) $(SHELLS) && chsh -s $(ZSH); fi
+zsh: ZSH=/usr/local/bin/zsh
+zsh: SHELLS=/private/etc/shells
+zsh: brew
+	if ! grep -q $(ZSH) $(SHELLS); then brew install zsh zsh-completion pcre && sudo append $(ZSH) $(SHELLS) && chsh -s $(ZSH); fi
 
 git: brew
 	brew install git
