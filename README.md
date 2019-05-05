@@ -44,13 +44,14 @@ Use the [Makefile](./Makefile) to install everything [listed above](#package-ove
 
 ## Post-install
 
-- Follow installation for [Powerline](https://powerline.readthedocs.io/en/latest/installation/osx.html)
+- Using Font Book application add Powerline fonts in Dropbox Font folder
 - `dotfiles dock` (set [Dock items](./macos/dock.sh))
 - `dotfiles macos` (set [macOS defaults](./macos/defaults.sh))
 - Mackup
   - Log in to Dropbox (and wait until synced)
   - `ln -s ~/.config/mackup/.mackup.cfg ~` (until [#632](https://github.com/lra/mackup/pull/632) is fixed)
   - `mackup restore`
+- For Sublime install Package Manager to use packages added by Mackup
 
 ## The `dotfiles` command
 
