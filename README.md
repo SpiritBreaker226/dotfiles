@@ -77,7 +77,6 @@ Alternatively, you can have an additional, personal dotfiles repo at `~/.extra`.
 - [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Homebrew](https://brew.sh)
 - [Homebrew Cask](http://caskroom.io)
-- [Solarized Color Theme for GNU ls](https://github.com/seebi/dircolors-solarized)
 
 ## Credits
 
