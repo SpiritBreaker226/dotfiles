@@ -77,7 +77,7 @@ Alternatively, you can have an additional, personal dotfiles repo at `~/.extra`.
 
 - [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Homebrew](https://brew.sh)
-- [Homebrew Cask](http://caskroom.io)
+- [Homebrew Cask](https://formulae.brew.sh/cask)
 
 ## Credits
 
