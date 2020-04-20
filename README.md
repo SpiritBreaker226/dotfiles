@@ -52,6 +52,10 @@ Use the [Makefile](./Makefile) to install everything [listed above](#package-ove
   - `ln -s ~/.config/mackup/.mackup.cfg ~` (until [#632](https://github.com/lra/mackup/pull/632) is fixed)
   - `mackup restore`
 - For Sublime install Package Manager to use packages added by Mackup
+- For Settings Sync in VSCode
+  - Login into GitHub
+  - Select the Settings GIST
+  - Download the latest settings for VSCode
 
 ## The `dotfiles` command
 
