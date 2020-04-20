@@ -1,19 +1,21 @@
 [user]
 	name = Jason Stathopulos
-	email = jstathopulos@gmail.com
+	email = jstathopulos@gmail.com # WARNING Switch to Work Email on Work Computer
 
 [github]
 	user = SpiritBreaker226
 
 [core]
-	editor = "/Applications/TextMate.app/Contents/Resources/mate -w"
+	editor = code --wait
 	excludesfile = ~/.config/git/.gitignore_global
 
 [merge]
 	tool = opendiff
 
 [diff]
-	tool = opendiff
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 
 [color]
 	interactive = auto
@@ -39,7 +41,7 @@
 	default = simple
 
 [pull]
-	rebase = preserve
+	rebase = merges
 
 [filter "media"]
 	required = true
@@ -58,6 +60,8 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	force-push = "!push -f origin $a"
+	gundo = git reset HEAD~
+	gredo = git commit -c ORIG_HEAD
 
 [filter "lfs"]
 	clean = git-lfs clean %f
