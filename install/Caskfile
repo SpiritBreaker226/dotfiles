@@ -4,7 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 cask "bartender"
-cask "dash2"
+cask "dash4"
 cask "dbeaver-community"
 cask "dropbox"
 cask "flux"
