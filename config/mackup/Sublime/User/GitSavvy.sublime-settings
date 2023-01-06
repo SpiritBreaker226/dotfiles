@@ -1,0 +1,22 @@
+// Settings in here override those in "GitSavvy/GitSavvy.sublime-settings",
+
+{
+    "merge_log": false,
+    "show_git_flow_commands": true,
+    "show_full_commit_info": true,
+    "log_follow_rename": true,
+    "blame_follow_rename": true,
+    "arrow_keys_navigation": true,
+    "tab_order": [
+        "status",
+        "rebase",
+        "graph",
+        "branch"
+    ],
+    "rebase_default_base_ref": "master",
+    "rebase_preserve_merges": true,
+    "commit_on_close": true,
+    "show_commit_diff": "full",
+    "pedantic_commit_message_line_length": 72,
+    "api_tokens": { "github.com": "e809e86ac29254456c88bc503f7e7bac1ea36f91" }
+}

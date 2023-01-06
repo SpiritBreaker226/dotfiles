@@ -1,0 +1,51 @@
+[
+  { "keys": ["super+alt+shift+g"], "command": "new_pane", "args": {"move": false} },
+  { "keys": ["ctrl+shift+backquote"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+  { "keys": ["ctrl+backquote"], "command": "glue"},
+  { "keys": ["super+shift+v"], "command": "paste" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["ctrl+super+f6"], "command": "debug", "args": {"command":"start_debug"} },
+  { "keys": ["f6"], "command": "toggle_setting", "args": {"setting": "spell_check"} },
+  {
+      "keys": ["backspace"],
+      "command": "gs_status_discard_changes_to_file",
+      "context": [
+          { "key": "setting.command_mode", "operator": "equal", "operand": false },
+          { "key": "setting.git_savvy.status_view", "operator": "equal", "operand": true }
+      ]
+  },
+  {
+      "keys": ["d"],
+      "command": "gs_status_diff",
+      "context": [
+          { "key": "setting.command_mode", "operator": "equal", "operand": false },
+          { "key": "setting.git_savvy.status_view", "operator": "equal", "operand": true }
+      ]
+  },
+  {
+      "keys": ["enter"],
+      "command": "gs_status_open_file",
+      "context": [
+          { "key": "setting.command_mode", "operator": "equal", "operand": false },
+          { "key": "setting.git_savvy.status_view", "operator": "equal", "operand": true }
+      ]
+  },
+  {
+      "keys": ["super+alt+ctrl+l"],
+      "command": "gs_log",
+      "args": { "current_file": true }
+  },
+  {
+      "keys": ["super+alt+ctrl+p"],
+      "command": "gs_push",
+      "args": { "force_with_lease": true }
+  },
+  {
+      "keys": ["super+alt+ctrl+b"],
+      "command": "gs_blame_current_file"
+  },
+  {
+      "keys": ["super+alt+ctrl+s"],
+      "command": "gs_show_status"
+  }
+]

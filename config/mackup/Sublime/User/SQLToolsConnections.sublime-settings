@@ -1,0 +1,15 @@
+{
+  "connections": {
+    "Connection MSSQL": {
+      "type"    : "mssql",
+      "host"    : "localhost",
+      "instance": "SQLEXPRESS",
+      "port"    :  1433,
+      "username": "sa",
+      "password": "Password123",
+      "database": "cloud_db",
+      "encoding": "utf-8"
+    }
+  },
+  "default": null
+}

@@ -1,0 +1,12 @@
+{
+  "email": "jstathopulos@gmail.com",
+  "product_key": "78a463270da494cbd3a4c670d0a4fc30",
+  "git_commit_verbose": true,
+  "git_commit_pedantic": true,
+  "git_executables": {
+        "git": ["/usr/local/bin/git"],
+        "git_flow": ["git-flow"],
+        "legit": ["legit"],
+        "gitk": ["gitk"]
+    }
+}
