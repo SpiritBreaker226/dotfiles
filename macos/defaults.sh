@@ -17,7 +17,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
-sudo systemsetup -settimezone "America/Toronto" > /dev/null
+sudo systemsetup -settimezone "America/Vancouver" > /dev/null
 
 # Disable audio feedback when volume is changed
 defaults write com.apple.sound.beep.feedback -bool false
