@@ -60,8 +60,13 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	force-push = "!push -f origin $a"
-	gundo = git reset HEAD~
-	gredo = git commit -c ORIG_HEAD
+	undo = reset HEAD~
+	redo = commit -c ORIG_HEAD
+  rbd = rebase --autosquash develop
+  rbm = rebase --autosquash master
+  rbmain = rebase --autosquash main
+  rbi = rebase --interactive --autosquash
+  force = push --force-with-lease origin
 
 [filter "lfs"]
 	clean = git-lfs clean %f
